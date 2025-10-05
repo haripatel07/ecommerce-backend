@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: E-commerce Backend API
+  version: 1.0.0
+  description: API documentation for the E-commerce backend system
+servers:
+  - url: http://localhost:5000/api
+paths:
+  /products:
+    get:
+      summary: Get all products
+      responses:
+        '200':
+          description: List of products
+    post:
+      summary: Create a new product
+      responses:
+        '201':
+          description: Product created
+  /products/{id}:
+    get:
+      summary: Get product by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product details
+    put:
+      summary: Update product by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product updated
+    delete:
+      summary: Delete product by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product deleted
+  /auth/register:
+    post:
+      summary: Register a new user
+      responses:
+        '201':
+          description: User registered
+  /auth/login:
+    post:
+      summary: Login user
+      responses:
+        '200':
+          description: User logged in
+  /orders:
+    post:
+      summary: Create a new order
+      responses:
+        '201':
+          description: Order created
+  /orders/myorders:
+    get:
+      summary: Get logged in user's orders
+      responses:
+        '200':
+          description: List of user's orders
+  /orders/{id}:
+    get:
+      summary: Get order by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Order details
+  /payments/create-payment-intent:
+    post:
+      summary: Create Stripe payment intent
+      responses:
+        '200':
+          description: Payment intent created
+  /payments/stripe-webhook:
+    post:
+      summary: Stripe webhook endpoint
+      responses:
+        '200':
+          description: Webhook received
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Health status
