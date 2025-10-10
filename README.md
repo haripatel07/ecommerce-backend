@@ -153,20 +153,6 @@ Run tests using:
 npm test
 ```
 
-*Note: Unit and integration tests can be added as the project grows.*
-
-## Deployment
-
-### Heroku Deployment
-1. Create a Heroku app
-2. Set environment variables in Heroku dashboard
-3. Connect your GitHub repository
-4. Deploy automatically or manually
-
-### Docker Deployment
-```dockerfile
-# Add Dockerfile content here when containerized
-```
 
 ## Contributing
 
