@@ -170,8 +170,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Hari Patel**
 - GitHub: [@haripatel07](https://github.com/haripatel07)
-- Email: hari@example.com
+- Email: patelhariv18@gmail.com
 
 ---
-
-*Built with ❤️ using Node.js and Express.js*
